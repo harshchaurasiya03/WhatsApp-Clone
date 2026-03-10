@@ -5,6 +5,7 @@ import { auth, provider } from './Firebase';
 import { signInWithPopup } from "firebase/auth"; // Firebase v9 import
 import { useStateValue } from './StateProvider';
 import { actionTypes } from './Reducer';
+import whatsAppImg from './assests/logo.png'; // Ensure this path is correct
 
 function Login() {
   const [, dispatch] = useStateValue();
@@ -24,7 +25,7 @@ function Login() {
     <div className="login">
       <div className="login_container">
         <img 
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/598px-WhatsApp.svg.png" 
+          src={whatsAppImg} 
           alt="WhatsApp Logo" 
         />
         <div className="login_text">
